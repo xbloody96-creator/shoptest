@@ -1,16 +1,66 @@
-```
-# Environment variables
+```php
+# Environment and configuration
 .env
 .env.local
 .env.*
 
-# Dependencies
-vendor/
-
 # Logs
 *.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# PHP specific
+*.php~
+.php_cs.cache
+.sass-cache/
+
+# Build artifacts
+dist/
+build/
+coverage/
+htmlcov/
+*.out
+
+# Dependencies
+vendor/
+node_modules/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Cache directories
+.cache/
+.cargo/
+.npm/
+.yarn/
+
+# Testing
+.phpunit.result.cache
+.hadolint.yaml
+
+# Distribution / packaging
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.gz
+*.rar
+*.7z
+
+# Sensitive
+config/secrets.yml
+storage/oauth-private.key
+storage/oauth-public.key
 ```
