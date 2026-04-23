@@ -1,0 +1,273 @@
+/* Режим для слабовидящих (лупа) */
+
+.accessibility-mode {
+    font-size: 120% !important;
+    line-height: 1.8 !important;
+}
+
+.accessibility-mode body {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.accessibility-mode h1,
+.accessibility-mode h2,
+.accessibility-mode h3,
+.accessibility-mode h4,
+.accessibility-mode h5,
+.accessibility-mode h6 {
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+}
+
+.accessibility-mode h1 { font-size: 2.5rem !important; }
+.accessibility-mode h2 { font-size: 2rem !important; }
+.accessibility-mode h3 { font-size: 1.75rem !important; }
+.accessibility-mode h4 { font-size: 1.5rem !important; }
+
+.accessibility-mode p {
+    font-size: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.accessibility-mode a {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.accessibility-mode button,
+.accessibility-mode .btn {
+    font-size: 1.2rem !important;
+    padding: 1rem 2rem !important;
+    min-height: 50px !important;
+    border-width: 2px !important;
+}
+
+.accessibility-mode input,
+.accessibility-mode select,
+.accessibility-mode textarea {
+    font-size: 1.2rem !important;
+    padding: 1rem !important;
+    min-height: 50px !important;
+    border-width: 2px !important;
+}
+
+.accessibility-mode img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.accessibility-mode .container {
+    max-width: 1400px !important;
+}
+
+.accessibility-mode .card,
+.accessibility-mode .product-card,
+.accessibility-mode .news-card {
+    padding: 2rem !important;
+    border-width: 2px !important;
+}
+
+.accessibility-mode .header {
+    padding: 1.5rem 0 !important;
+}
+
+.accessibility-mode .nav-link {
+    font-size: 1.2rem !important;
+    padding: 1rem !important;
+}
+
+.accessibility-mode .footer {
+    padding: 3rem 0 !important;
+}
+
+/* Высокая контрастность для слабовидящих */
+.accessibility-mode.high-contrast {
+    --bg-color: #000000 !important;
+    --bg-secondary: #1a1a1a !important;
+    --card-bg: #1a1a1a !important;
+    --text-color: #ffffff !important;
+    --text-muted: #e0e0e0 !important;
+    --border-color: #ffffff !important;
+    --primary-color: #ffff00 !important;
+    --primary-hover: #ffcc00 !important;
+}
+
+.accessibility-mode.high-contrast * {
+    border-color: #ffffff !important;
+}
+
+.accessibility-mode.high-contrast a,
+.accessibility-mode.high-contrast .btn-primary {
+    color: #ffff00 !important;
+    background-color: #000000 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+.accessibility-mode.high-contrast .btn-primary:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+
+/* Увеличенные курсоры */
+.accessibility-mode * {
+    cursor: crosshair !important;
+}
+
+.accessibility-mode button,
+.accessibility-mode a,
+.accessibility-mode .clickable {
+    cursor: pointer !important;
+}
+
+/* Фокус для клавиатуры */
+.accessibility-mode *:focus {
+    outline: 4px solid #ffff00 !important;
+    outline-offset: 4px !important;
+}
+
+/* Анимации отключены для слабовидящих */
+.accessibility-mode *,
+.accessibility-mode *::before,
+.accessibility-mode *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+/* Кнопка переключения режима доступности */
+.accessibility-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.accessibility-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.accessibility-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Панель настроек доступности */
+.accessibility-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    z-index: 9998;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: none;
+    min-width: 250px;
+}
+
+.accessibility-panel.active {
+    display: block;
+}
+
+.accessibility-panel h4 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.accessibility-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.accessibility-option label {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.accessibility-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.accessibility-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.accessibility-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.accessibility-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.accessibility-switch input:checked + .accessibility-slider {
+    background-color: var(--primary-color);
+}
+
+.accessibility-switch input:checked + .accessibility-slider:before {
+    transform: translateX(30px);
+}
+
+/* Размер шрифта */
+.font-size-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.font-size-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.font-size-btn:hover,
+.font-size-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}

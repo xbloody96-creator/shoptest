@@ -14,53 +14,20 @@ vendor/
 # Editor/IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Build artifacts
-dist/
-build/
-*.o
-*.obj
-*.out
-
 # PHP specific
 *.php~
-phpunit.xml.dist
-coverage/
+*.swp
 
-# Cache directories
+# Cache
 .cache/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.cache
 
-# Archives
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# Build/compiled
+build/
+dist/
 ```
