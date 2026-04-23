@@ -4,7 +4,7 @@ require_once __DIR__ . '/../src/config/database.php';
 
 $pdo = \App\Config\Database::getInstance()->getConnection();
 
-$stmt = $pdo->prepare("SELECT p.*, c.name as category_name FROM products p LEFT JOIN categories c ON p.category_id = c.id WHERE p.is_available = 1 ORDER BY p.view_count DESC LIMIT 5");
+$stmt = $pdo->prepare("SELECT p.*, c.name as category_name FROM products p LEFT JOIN categories c ON p.category_id = c.id WHERE p.status = 1 ORDER BY p.view_count DESC LIMIT 5");
 $stmt->execute();
 $sliderProducts = $stmt->fetchAll();
 
@@ -16,7 +16,7 @@ if (empty($sliderProducts)) {
     ];
 }
 
-$stmt = $pdo->prepare("SELECT p.*, c.name as category_name FROM products p LEFT JOIN categories c ON p.category_id = c.id WHERE p.is_available = 1 ORDER BY p.created_at DESC LIMIT 8");
+$stmt = $pdo->prepare("SELECT p.*, c.name as category_name FROM products p LEFT JOIN categories c ON p.category_id = c.id WHERE p.status = 1 ORDER BY p.created_at DESC LIMIT 8");
 $stmt->execute();
 $newProducts = $stmt->fetchAll();
 
