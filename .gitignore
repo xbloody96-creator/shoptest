@@ -1,16 +1,72 @@
-```
-# Environment variables
+```php
+# Dependencies
+vendor/
+
+# Build artifacts
+composer.lock
+
+# Environment
 .env
 .env.local
 .env.*
 
-# Dependencies
-vendor/
-
 # Logs
 *.log
+
+# Temporary files
+*.tmp
+*.temp
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache directories
+.cache/
+*.cache
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Distribution builds
+dist/
+build/
+target/
+
+# Python artifacts (if any Python files exist)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Node artifacts (if any JS files exist)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.rar
+*.7z
 ```
